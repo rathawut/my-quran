@@ -8,62 +8,65 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
           integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/site.css">
 </head>
 <body>
 <div id="app" class="text-center" v-cloak>
-    <h3>Group: {{group}}</h3>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-6">
-                    <span>{{getPage(group, 6)}}</span>
-                    <img :src="getQuranUrl(group, 6)" style="max-width: 100%">
+    <v-touch @tap="group++" @swipeleft="group++" @swiperight="group--">
+        <h3>Group: {{group}}</h3>
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6">
+                        <span>{{getPage(group, 6)}}</span>
+                        <img :src="getQuranUrl(group, 6)" style="max-width: 100%">
+                    </div>
+                    <div class="col-6">
+                        <span>{{getPage(group, 5)}}</span>
+                        <img :src="getQuranUrl(group, 5)" style="max-width: 100%">
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <span>{{getPage(group, 5)}}</span>
-                    <img :src="getQuranUrl(group, 5)" style="max-width: 100%">
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6">
+                        <span>{{getPage(group, 2)}}</span>
+                        <img :src="getQuranUrl(group, 2)" style="max-width: 100%">
+                    </div>
+                    <div class="col-6">
+                        <span>{{getPage(group, 1)}}</span>
+                        <img :src="getQuranUrl(group, 1)" style="max-width: 100%">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-6">
-                    <span>{{getPage(group, 2)}}</span>
-                    <img :src="getQuranUrl(group, 2)" style="max-width: 100%">
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6">
+                        <span>{{getPage(group, 8)}}</span>
+                        <img :src="getQuranUrl(group, 8)" style="max-width: 100%">
+                    </div>
+                    <div class="col-6">
+                        <span>{{getPage(group, 7)}}</span>
+                        <img :src="getQuranUrl(group, 7)" style="max-width: 100%">
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <span>{{getPage(group, 1)}}</span>
-                    <img :src="getQuranUrl(group, 1)" style="max-width: 100%">
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6">
+                        <span>{{getPage(group, 4)}}</span>
+                        <img :src="getQuranUrl(group, 4)" style="max-width: 100%">
+                    </div>
+                    <div class="col-6">
+                        <span>{{getPage(group, 3)}}</span>
+                        <img :src="getQuranUrl(group, 3)" style="max-width: 100%">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-6">
-                    <span>{{getPage(group, 8)}}</span>
-                    <img :src="getQuranUrl(group, 8)" style="max-width: 100%">
-                </div>
-                <div class="col-md-6">
-                    <span>{{getPage(group, 7)}}</span>
-                    <img :src="getQuranUrl(group, 7)" style="max-width: 100%">
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-6">
-                    <span>{{getPage(group, 4)}}</span>
-                    <img :src="getQuranUrl(group, 4)" style="max-width: 100%">
-                </div>
-                <div class="col-md-6">
-                    <span>{{getPage(group, 3)}}</span>
-                    <img :src="getQuranUrl(group, 3)" style="max-width: 100%">
-                </div>
-            </div>
-        </div>
-    </div>
+    </v-touch>
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -78,6 +81,8 @@
         crossorigin="anonymous"></script>
 <script src="https://unpkg.com/vue@2.4.4/dist/vue.min.js"></script>
 <script src="https://unpkg.com/lodash@4.17.4/lodash.js"></script>
+<script src="https://unpkg.com/hammerjs@2.0.8/hammer.js"></script>
+<script src="https://unpkg.com/vue-touch@2.0.0-beta.4/dist/vue-touch.js"></script>
 <script src="./index.js"></script>
 </body>
 </html>

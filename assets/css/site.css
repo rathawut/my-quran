@@ -1,3 +1,7 @@
 [v-cloak] {
     display: none;
 }
+
+#app .col-6 {
+    border: 1px solid #ccc;
+}
