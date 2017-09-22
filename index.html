@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="app" class="text-center" v-cloak>
-    <v-touch @tap="group++" @swipeleft="group++" @swiperight="group--">
+    <v-touch @tap="group++" @swipeleft="group--" @swiperight="group++">
         <h3>Group: {{group}}</h3>
         <div class="row">
             <div class="col-6">
